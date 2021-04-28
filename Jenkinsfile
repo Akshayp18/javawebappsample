@@ -13,11 +13,7 @@ node {
     stage('init') {
       checkout scm
     }
-  
-    stage('build') {
-      bat 'mvn clean package'
-    }
-  
+    
     stage('deploy') {
       def resourceGroup = '<resource_group>'
       def webAppName = '<app_name>'
